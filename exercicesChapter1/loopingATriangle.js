@@ -1,7 +1,10 @@
+// My solution
 let a = "#"
-let b = " "
-let c = 7;
-for (let i=1; i <= 7; i++){
-    console.log(`${a.repeat(i) + b.repeat(c)}`);
-    c -= 1;
+for (let i=1; i <= 8; i++){
+    console.log(`${a.repeat(i)}`);
 }
+
+// Other solution
+
+for (let line = "#"; line.length < 8; line += "#")
+    console.log(line);
