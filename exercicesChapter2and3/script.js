@@ -8,12 +8,13 @@ console.log(min(10,-22));
 
 const isEven = (num) => {
     if(num === 0){
-      return "Even number"
-  }
-  if(num !==0 && num > 0){
-      return isEven(num-2);
+      return true
+  }else if(num === 1){
+      return false
+  }else if(num < 0) {
+      return isEven(-num);
   }else{
-      return "Odd number"
+      return isEven(num -2);
   }
 
 }
