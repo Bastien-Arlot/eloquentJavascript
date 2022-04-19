@@ -30,3 +30,8 @@ const countBs = (string) => {
 }
 
 console.log(countBs("Bonjour les amis BBBBBb"));
+
+const countChar = (string, search) => {
+    return string.split("").filter(x => x === search).length;
+}
+console.log(countChar("Bonjour les CooPains Anglais aah", "a"));
