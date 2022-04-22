@@ -72,3 +72,18 @@ const reverseArray = (arr) => {
 
 console.log(reverseArray(array));
 console.log(array);
+
+//reversing Array in place
+
+const reverseArrayInPlace = (arr) => {
+    const newArr = arr.slice();
+    let j = 0;
+    for(let i = newArr.length-1; i >= 0; i--){
+        arr[j] = newArr[i];
+        j++;
+    }
+    return arr;
+
+}
+reverseArrayInPlace(array);
+console.log(array);
