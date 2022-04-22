@@ -6,13 +6,13 @@ const range = (start, end) => {
         arr.push(i);
     }
     return arr;
-}
+};
 console.log(range(1, 10));
 //Sum array
 const sum = (arr) => {
     return arr.reduce((a,b) => a + b, 0);
 
-}
+};
 console.log(sum(range(1,10)));
 //Sum array v2
 const sum2 = (arr) => {
@@ -21,7 +21,7 @@ const sum2 = (arr) => {
         sum += elem;
     }
     return sum;
-}
+};
 console.log(sum2(range(1,10)));
 
 //Bonus assignment
@@ -34,12 +34,12 @@ const rangev2 = (start, end, step) => {
         }
         return arr;
     }
-}
+};
 
 console.log(rangev2(1,10,2));
 
 //Solution from the book
-function range(start, end, step = start < end ? 1 : -1) {
+function rangeSolution(start, end, step = start < end ? 1 : -1) {
     let array = [];
 
     if (step > 0) {
@@ -48,12 +48,27 @@ function range(start, end, step = start < end ? 1 : -1) {
         for (let i = start; i >= end; i += step) array.push(i);
     }
     return array;
-}
+};
 
-function sum(array) {
+function sumSolution(array) {
     let total = 0;
     for (let value of array) {
         total += value;
     }
     return total;
-}
+};
+
+//Reversing an Array
+const array = [1,2,3,4,5];
+const reverseArray = (arr) => {
+    const reversedArr = [];
+    let j = 0;
+    for(let i = arr.length-1; i >=0; i--){
+        reversedArr[j] = arr[i];
+        j++;
+    }
+    return reversedArr;
+};
+
+console.log(reverseArray(array));
+console.log(array);
