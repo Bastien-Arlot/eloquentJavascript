@@ -8,3 +8,9 @@ const range = (start, end) => {
     return arr;
 }
 console.log(range(1, 10));
+
+const sum = (arr) => {
+    return arr.reduce((a,b) => a + b, 0);
+
+}
+console.log(sum(range(1,10)));
