@@ -23,3 +23,37 @@ const sum2 = (arr) => {
     return sum;
 }
 console.log(sum2(range(1,10)));
+
+//Bonus assignment
+
+const rangev2 = (start, end, step) => {
+    const arr = [];
+    if(step !== null){
+        for(let i = start; i <= end; i += step){
+         arr.push(i);
+        }
+        return arr;
+    }
+}
+
+console.log(rangev2(1,10,2));
+
+//Solution from the book
+function range(start, end, step = start < end ? 1 : -1) {
+    let array = [];
+
+    if (step > 0) {
+        for (let i = start; i <= end; i += step) array.push(i);
+    } else {
+        for (let i = start; i >= end; i += step) array.push(i);
+    }
+    return array;
+}
+
+function sum(array) {
+    let total = 0;
+    for (let value of array) {
+        total += value;
+    }
+    return total;
+}
