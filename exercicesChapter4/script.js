@@ -105,6 +105,18 @@ function reverseArrayInPlaceSolution(array) {
         array[array.length - 1 - i] = old;
     }
     return array;
-
-
 }
+
+//A list exercice
+
+ const arrToBeListed = [1,2,3];
+let list = {};
+const arrayToList = (arr) => {
+    for(let i = 0; i < arr.length; i++){
+        list = {value: arr[i], rest: list};
+    }
+    return list;
+};
+arrayToList(arrToBeListed);
+
+console.log(list);
