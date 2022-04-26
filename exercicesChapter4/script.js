@@ -120,13 +120,33 @@ const arrayToList = (arr) => {
 arrayToList(arrToBeListed);
 
 console.log(list);
-list2 = {};
-const prepend = (elem, list) => {
+let list2 = {};
+const prepend = (elem, list) => { //did not understand the function so it works but not waht intended
     for(let i = 0; i <= elem; i++){
         list = {value: i, rest: list};
     };
 
     return list;
 };
+let list3 = prepend(5,list2);
+console.log(list3);
 
-console.log(prepend(5,list2));
+function prepend1(value, list) { //function with good understand of what was asked
+    return {value, rest: list};
+}
+list3 = prepend1(9,list2);
+
+console.log(list3);
+console.log(list);
+
+const listToArray = (list) => {
+    let arr = [];
+    let i = 0;
+    while(list.value !== 0){
+        arr.push(list.value);
+        list.value--;
+    }
+    return arr;
+}
+
+console.log(listToArray(list));
