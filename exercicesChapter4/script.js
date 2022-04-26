@@ -150,3 +150,20 @@ const listToArray = (list) => {
 }
 
 console.log(listToArray(list));
+//solution from the book in an ordered way
+
+function listToArray2(list) {
+    let array = [];
+    for (let node = list; node; node = node.rest) {
+        array.push(node.value);
+    }
+    return array;
+}
+
+console.log(listToArray2(list));
+// recursive way of nth
+function nth(list, n) {
+    if (!list) return undefined;
+    else if (n == 0) return list.value;
+    else return nth(list.rest, n - 1);
+}
