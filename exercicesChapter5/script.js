@@ -35,3 +35,16 @@ const every2 = (arr, functionTest) => {
 console.log(every([3,5,6], x => x > 100));
 
 console.log(every2([3,5,6], x => x < 100));
+
+//Solution from the book
+
+function every3(array, predicate) {
+    for (let element of array) {
+        if (!predicate(element)) return false;
+    }
+    return true;
+}
+
+function every4(array, predicate) {
+    return !array.some(element => !predicate(element));
+}
