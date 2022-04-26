@@ -120,3 +120,13 @@ const arrayToList = (arr) => {
 arrayToList(arrToBeListed);
 
 console.log(list);
+list2 = {};
+const prepend = (elem, list) => {
+    for(let i = 0; i <= elem; i++){
+        list = {value: i, rest: list};
+    };
+
+    return list;
+};
+
+console.log(prepend(5,list2));
