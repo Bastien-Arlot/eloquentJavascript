@@ -41,19 +41,27 @@ class Group {
     add(value) {
         if (!this.container.includes(value)) {
             this.container.push(value);
-        }else{
+        } else {
             alert("This value is already in the group");
         }
     }
-    remove(value){
-        if(this.container.includes(value)){
-          let index = this.container.indexOf(value);
-          this.container.splice(index,1);
-                }else{
+
+    remove(value) {
+        if (this.container.includes(value)) {
+            let index = this.container.indexOf(value);
+            this.container.splice(index, 1);
+        } else {
             alert("this value isnt in the group");
         }
-            }
+    }
+    has(value){
+        if(this.container.includes(value)){
+            return true;
+        }else{
+            return false;
         }
+    }
+}
 
 let group1 = new Group();
 group1.add(2);
@@ -64,3 +72,5 @@ group1.remove(3);
 group1.add(5);
 group1.remove(2);
 console.log(group1);
+console.log(group1.has(5));
+console.log(group1.has(2));
