@@ -6,17 +6,24 @@ class Vec{
         this.y = y;
     }
     plus(z){
-        return z + (this.x + this.y);
+        return new Vec(z.x + this.x, z.y + this.y);
     }
     minus(z){
-        return z - (this.x + this.y);
+        return new Vec(z.x - this.x, z.y - this.y);
     }
     get length(){
-        return console.log(this.x - 0, this.y - 0);
+        return (this.x - 0) + (this.y - 0);
     }
 }
 
-let Vec2 = new Vec(4,2);
+let vec2 = new Vec(3,4);
 
-Vec2.length;
-console.log(Vec2.plus(2));
+console.log(vec2.length);
+console.log(vec2.plus(new Vec(3,3)));
+
+let vec3 = vec2.plus(new Vec(4,2));
+console.log(vec3);
+
+console.log(vec3.length);
+
+
