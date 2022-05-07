@@ -5,11 +5,11 @@ class Vec{
         this.x = x;
         this.y = y;
     }
-    plus(z){
-        return new Vec(z.x + this.x, z.y + this.y);
+    plus(newVec){
+        return new Vec(newVec.x + this.x, newVec.y + this.y);
     }
-    minus(z){
-        return new Vec(z.x - this.x, z.y - this.y);
+    minus(newVec){
+        return new Vec(newVec.x - this.x, newVec.y - this.y);
     }
     get length(){
         return Math.sqrt(this.x * this.x + this.y * this.y);
