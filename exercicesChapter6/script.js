@@ -61,6 +61,14 @@ class Group {
             return false;
         }
     }
+    static from(arr){
+        let group = new Group;
+
+        for(let x of arr){
+            group.add(x);
+        }
+        return group;
+    }
 }
 
 let group1 = new Group();
@@ -74,3 +82,7 @@ group1.remove(2);
 console.log(group1);
 console.log(group1.has(5));
 console.log(group1.has(2));
+console.log(group1.container.indexOf(5));
+console.log(group1.container.indexOf(9));
+let group = Group.from([10, 20]);
+console.log(group);
