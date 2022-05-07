@@ -12,7 +12,7 @@ class Vec{
         return new Vec(z.x - this.x, z.y - this.y);
     }
     get length(){
-        return (this.x - 0) + (this.y - 0);
+        return Math.sqrt(this.x * this.x + this.y * this.y);
     }
 }
 
@@ -26,4 +26,4 @@ console.log(vec3);
 
 console.log(vec3.length);
 
-
+console.log(new Vec(3, 4).length)
